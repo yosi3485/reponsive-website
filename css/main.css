@@ -452,18 +452,18 @@ template {
 }
 
 *, *::before, *::after {
-  -webkit-box-sizing: bolder-box;
-  box-sizing: bolder-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .container {
   width: 95%;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -476,7 +476,7 @@ img {
 
 .main-header {
   position: absolute;
-  top: 0;
+  top: 1em;
   left: 0;
   right: 0;
 }
@@ -499,6 +499,7 @@ img {
   color: white;
   padding-top: 8em;
   padding-bottom: 8em;
+  text-align: center;
 }
 
 .hero img {
