@@ -568,6 +568,18 @@ h2 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -578,9 +590,8 @@ h2 {
   justify-content: center;
 }
 
-.main-nav a {
-  color: white;
-  text-decoration: none;
+.main-nav a:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .main-nav.is-open {
