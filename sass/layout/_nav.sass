@@ -9,6 +9,13 @@
 
 	transition: all ease-in-out 250ms
 
+	@media (min-width: 725px)
+		position: relative
+		flex: auto
+		background: none
+		margin-top: 1em
+		margin-left: 2em
+
 	ul 
 		display: flex
 		flex-direction: column
@@ -16,12 +23,19 @@
 		text-align: center
 		height: 100vh
 
+		@media (min-width: 725px)
+			flex-direction: row
+			height: auto
+
 	li 
 		flex-grow: 1
 		flex-shrink: 1 
 		flex-basis: auto
 		border-bottom: 1px solid rgba(0, 0, 0, .15)
 		display: flex
+
+		@media (min-width: 725px)
+			border: none
 
 		
 	a 
@@ -32,8 +46,15 @@
 		align-items: center
 		justify-content: center
 
+		@media (min-width: 725px)
+			justify-content: flex-end
+
 		&:hover
 			background: rgba(0, 0, 0, .10)
+
+			@media (min-width: 725px)
+				background: none
+				color: darken($accent, 15%)
 
 
 	&.is-open
@@ -48,6 +69,9 @@
 	right: 1em
 	top: 1em
 	cursor: pointer
+
+	@media (min-width: 725px)
+		display: none
 
 .hamburguer, .hamburguer::before, .hamburguer::after
 	content: ''
@@ -70,7 +94,7 @@
 		transform: rotate(-90deg) translateX(3px)
 
 	&::before 
-		opacity: 0 
+		opacity: 0
 
 
 
