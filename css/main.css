@@ -25,7 +25,6 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  background: #048ca8;
   margin: 0;
 }
 
@@ -458,6 +457,7 @@ template {
 
 body {
   color: #048ca8;
+  text-align: center;
 }
 
 img {
@@ -477,6 +477,16 @@ img {
   list-style: none;
 }
 
+.lg-screen {
+  display: none;
+}
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 5em 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em;
 }
@@ -493,6 +503,7 @@ h1 {
   font-weight: 300;
   line-height: 1.15;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -505,10 +516,55 @@ h2 {
 .title-large {
   font-size: 3rem;
   font-weight: 900;
+  line-height: .9;
 }
 
 .title-large span {
   font-weight: 300;
+}
+
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 2em;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+  max-width: 90%;
+}
+
+@media (min-width: 495px) {
+  .title-box {
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+}
+
+.title-box + .bg-primary {
+  padding-top: 6em;
+}
+
+@media (min-width: 495px) {
+  .title-box + .bg-primary {
+    padding-top: 8em;
+  }
+}
+
+.title-footer {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.title-footer::before, .title-footer::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: white;
+  opacity: 0.25;
+  margin: .5em 0;
 }
 
 .text-intro {
@@ -520,6 +576,23 @@ h2 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.col-full {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
 .main-nav {
@@ -671,8 +744,41 @@ h2 {
   text-align: center;
 }
 
-.hero img {
-  display: none;
+.sales-points {
+  padding: 10vh 0 0;
+}
+
+.sale-point {
+  margin-bottom: 2.5em;
+}
+
+.sale-point:first-of-type {
+  margin-top: 1.5em;
+}
+
+.sale-point:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  background: #444;
+  color: white;
+  padding: 5em 0;
+}
+
+footer a {
+  color: white;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .btn {
@@ -704,4 +810,14 @@ h2 {
 .btn-secondary:hover, .btn-secondary:focus {
   background: white;
   color: #048ca8;
+}
+
+.cta {
+  background: #16db93;
+  background-image: url("../img/call-to-action-background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 5em 0;
+  background-blend-mode: multiply;
+  color: white;
 }
