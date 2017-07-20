@@ -658,6 +658,7 @@ h2 {
     background: none;
     margin-top: 1em;
     margin-left: 2em;
+    left: 0;
   }
 }
 
@@ -710,6 +711,7 @@ h2 {
 @media (min-width: 725px) {
   .main-nav li {
     border: none;
+    display: inline-block;
   }
 }
 
@@ -723,6 +725,7 @@ h2 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-basis: 100%;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -735,10 +738,7 @@ h2 {
 
 @media (min-width: 725px) {
   .main-nav a {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    display: inline;
   }
 }
 
@@ -965,6 +965,7 @@ footer a {
 
 .btn-primary:hover, .btn-primary:focus {
   background: #8e1047;
+  border-color: #8e1047;
 }
 
 .btn-secondary {
