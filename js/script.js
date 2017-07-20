@@ -5,4 +5,4 @@ $(document).ready(function() {
 		$('.hamburguer').toggleClass('is-open');
 	})
 
-});
+})
