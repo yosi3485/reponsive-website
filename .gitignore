@@ -32,3 +32,4 @@ Temporary Items
 *.css.map
 
 # End of https://www.gitignore.io/api/sass,macos
+prepros-6.config
